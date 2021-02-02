@@ -2,21 +2,18 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Global, css } from '@emotion/react';
-import reset from './reset';
-
-export const breakpoints = {
-  s: 576,
-  m: 768,
-  l: 992,
-  xl: 1200,
-};
+import normalise from './normalise';
+import main from './main';
 
 export const GlobalStyle = (props: any) => (
   <Global
     { ...props }
     styles={css`
     
-      ${reset}
+      ${normalise}
+      ${main}
+      
+      /*
       body {
         margin: 0;
         color: #000;
@@ -26,9 +23,20 @@ export const GlobalStyle = (props: any) => (
         -ms-text-size-adjust: 100%;
         -webkit-text-size-adjust: 100%;
       }
+      */
     `}
   />
 );
+
+
+/*
+export const breakpoints = {
+  s: 576,
+  m: 768,
+  l: 992,
+  xl: 1200,
+};
+*/
 
 export const Header = styled.div`
   display: flex;
@@ -64,10 +72,9 @@ export const Header = styled.div`
     width: 70px;
     text-align: center;
   }
- 
 `;
 
-
+/*
 export const Container = styled.div`
   margin: 0 auto;
   max-width: 960px;
@@ -111,3 +118,5 @@ export const MainContent = styled.main`
     margin-bottom: 20px;
   }
 `;
+
+ */
