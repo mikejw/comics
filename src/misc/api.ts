@@ -70,7 +70,7 @@ export interface Comic {
   collectedIssues: string[],
   dates: date[]
   prices: price[]
-  thumbnail: thumbnail[],
+  thumbnail: thumbnail,
   image: any[],
   "creators": {
     available: number,

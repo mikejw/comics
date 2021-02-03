@@ -15,8 +15,8 @@ import { callAPI } from '../misc/api'
  *
  * @param {Object} action
  */
-export function* initFetchComics(action: any) {
-  const data = yield call(callAPI);
+export function* initFetchComics(action: any): any {
+  const [ data, error ] = yield call(callAPI);
   yield put({
     type: Action.APPLY_FETCH_COMICS,
     payload: data

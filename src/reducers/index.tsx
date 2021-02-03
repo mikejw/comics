@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 import comicsReducer from './reducer_comics';
 
 const rootReducer = combineReducers({
-    images: comicsReducer
+    comics: comicsReducer
 });
 
 export default rootReducer;
