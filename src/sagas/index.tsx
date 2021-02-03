@@ -1,11 +1,9 @@
 
-
 import * as Action from '../actions';
 import {
   call,
   put,
-  takeLatest,
-  delay
+  takeLatest
 } from 'redux-saga/effects';
 import { callAPI } from '../misc/api'
 
@@ -17,10 +15,16 @@ import { callAPI } from '../misc/api'
  */
 export function* initFetchComics(action: any): any {
   const [ data, error ] = yield call(callAPI);
+
+  /*
+   * Handle errors here!
+   */
+
   yield put({
     type: Action.APPLY_FETCH_COMICS,
     payload: data
   });
+
 }
 
 /**
