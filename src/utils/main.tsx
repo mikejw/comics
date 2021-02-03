@@ -152,7 +152,7 @@ const main = `
   .favourites-panel {
     position: fixed;
     top: 0;
-    right: 0;
+    right: -320px;
     width: 100%;
     height: 100%;
     max-width: 320px;
@@ -163,6 +163,7 @@ const main = `
   }
   
   .favourites-panel.open {
+    right: 0px;
     transform: translate3d(0, 0, 0);
   }
   
